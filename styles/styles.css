@@ -109,3 +109,22 @@ input:focus {
     transition: .2s ease;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.65);
 }
+
+#login-btn {
+    width: 320px;
+    height: 56px;
+    font-size: 25px;
+    color: white;
+    border: none;
+    background-color: rgba(27, 32, 110, 0.648);
+    border-radius: 20px;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: .3s;
+}
+
+#login-btn:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    transition: .3s;
+    transform: scale(1.1);
+}
