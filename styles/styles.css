@@ -128,3 +128,18 @@ input:focus {
     transition: .3s;
     transform: scale(1.1);
 }
+
+/*or horizental line*/
+#or {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hr {
+    background-color: black;
+    height: 2px;
+    width: 20px;
+
+}
+
