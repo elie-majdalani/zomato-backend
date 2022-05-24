@@ -2,4 +2,13 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+
+    --color1: rgb(255, 0, 89);
+    --light1:rgb(255, 255, 255);
+    --light2: rgb(255, 114, 164);
+}
+
+body {
+    background: rgb(255,0,0);
+    background: linear-gradient(260deg, rgb(255, 96, 96) 0%, rgba(157,0,255,1) 100%);
 }
