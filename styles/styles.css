@@ -54,7 +54,7 @@ form {
     border-radius: 40px;
     transform: translateY(25px) scale(2.5);
     background: rgb(166,0,255);
-    background: linear-gradient(333deg, rgb(120, 0, 184) 0%, rgb(7, 0, 141) 100%);
+    background: linear-gradient(333deg, rgb(120, 0, 184) 0%, rgb(0, 122, 141) 100%);
     color: rgba(255, 255, 255, 0.927);
 }
 
@@ -66,6 +66,8 @@ form {
 }
 
 .input-container > input {
+    font-size: 20px;
+    padding-left: 20px;
     border: none;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
@@ -76,7 +78,22 @@ form {
 }
 
 .input-icon {
-    border: 2px red solid;
+    
+    background: rgb(166,0,255);
+    background: linear-gradient(333deg, rgba(166,0,255,1) 0%, rgb(255, 0, 170) 100%);
     height: auto;
     width: 70px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-icon > i {
+    transform: scale(1.6) translateX(1px);
+}
+
+input::placeholder {
+    font-size: 20px;
 }
