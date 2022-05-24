@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: 'Quicksand', sans-serif;
 
     --color1: rgb(255, 0, 89);
     --light1:rgb(255, 255, 255);
@@ -48,5 +51,5 @@ form {
     transform: translateY(25px);
     background: rgb(166,0,255);
     background: linear-gradient(333deg, rgb(120, 0, 184) 0%, rgb(7, 0, 141) 100%);
-    color: rgb(255, 255, 255);
+    color: rgba(255, 255, 255, 0.927);
 }
