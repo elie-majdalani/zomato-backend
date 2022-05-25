@@ -196,6 +196,7 @@ input:focus {
     display: none;
 } */
 
-#hero > img {
+img {
+    transform: translateY(25px);
     height: 600px;
 }
