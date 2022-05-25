@@ -156,7 +156,7 @@ input:focus {
 
 #or > span {
     margin: 0 10px;
-    cursor:;
+    cursor:default;
 }
 
 /*signup section*/
@@ -197,7 +197,7 @@ input:focus {
 } */
 
 img {
-    transform: translateY(25px);
+    transform: translateY(24.8px);
     height: 600px;
     border-radius: 0 20px 20px 0;
 }
