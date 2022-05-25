@@ -15,17 +15,28 @@
 body {
     background: rgb(255,0,0);
     background: linear-gradient(260deg, rgb(255, 96, 96) 0%, rgba(157,0,255,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /*----------------------------LOGIN PAGE----------------------------*/
 /*------------------------------------------------------------------*/
+#main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    padding-top: 50px;
+}
+
 #login-container {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 100vh;
+    /* width: 100%; */
+    /* height: 100vh; */
     align-items: center;
-    justify-content: center;
 }
 
 form {
@@ -33,7 +44,7 @@ form {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    background: rgb(255,255,255);
+    background: rgb(255, 255, 255);
     border-radius: 20px;
     background: linear-gradient(333deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.6) 34%, rgba(255,255,255,0.4) 68%, rgba(255,255,255,0.4) 100%);
     width: 60%;
@@ -44,7 +55,7 @@ form {
 }
 
 /*login label*/
-#login-container > div {
+#profile-logo {
     display: flex;
     justify-content: center;
     font-weight: bolder;
@@ -145,6 +156,7 @@ input:focus {
 
 #or > span {
     margin: 0 10px;
+    cursor:;
 }
 
 /*signup section*/
@@ -177,4 +189,13 @@ input:focus {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     transition: .3s;
     transform: scale(1.1);
+}
+
+/*HERO SECTION*/
+/* #hero {
+    display: none;
+} */
+
+#hero > img {
+    height: 600px;
 }
