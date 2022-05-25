@@ -38,7 +38,7 @@ i {
 
 #main-container-signup {
     background: rgb(255,0,0);
-    background: linear-gradient(260deg, rgb(247, 0, 255) 0%, rgb(0, 0, 255) 100%);
+    background: linear-gradient(260deg, rgb(247, 0, 255) 0%, rgb(0, 136, 255) 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,7 +61,7 @@ form {
     justify-content: space-around;
     background: rgb(255, 255, 255);
     border-radius: 20px 0 0 20px;
-    background: linear-gradient(333deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.6) 34%, rgba(255,255,255,0.4) 68%, rgba(255,255,255,0.4) 100%);
+    background: linear-gradient(333deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.6) 34%, rgba(255,255,255,0.4) 68%, rgba(255,255,255,0.4) 100%);
     width: 60%;
     min-width: 467px;
     height: 600px;
