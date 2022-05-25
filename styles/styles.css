@@ -18,6 +18,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 
 /*----------------------------LOGIN PAGE----------------------------*/
@@ -28,7 +29,6 @@ body {
     align-items: center;
     height: auto;
     width: 100%;
-    padding-top: 50px;
 }
 
 #login-container {
@@ -45,7 +45,7 @@ form {
     align-items: center;
     justify-content: space-around;
     background: rgb(255, 255, 255);
-    border-radius: 20px;
+    border-radius: 20px 0 0 20px;
     background: linear-gradient(333deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.6) 34%, rgba(255,255,255,0.4) 68%, rgba(255,255,255,0.4) 100%);
     width: 60%;
     min-width: 467px;
@@ -199,4 +199,5 @@ input:focus {
 img {
     transform: translateY(25px);
     height: 600px;
+    border-radius: 0 20px 20px 0;
 }
