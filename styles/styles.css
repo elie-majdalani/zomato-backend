@@ -21,7 +21,11 @@ body {
     height: 100vh;
 }
 
-/*----------------------------LOGIN PAGE----------------------------*/
+i {
+    color: white;
+}
+
+/*----------------------------LOGIN/SIGNUP PAGE----------------------------*/
 /*------------------------------------------------------------------*/
 #main-container {
     display: flex;
@@ -168,6 +172,7 @@ input:focus {
 #signup > span {
     color: rgba(0, 0, 0, 0.686);
     font-weight: 500;
+    cursor: default;
 }
 
 #signup > button {

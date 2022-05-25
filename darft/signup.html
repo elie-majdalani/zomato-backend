@@ -11,22 +11,34 @@
 
     <div id="main-container">
         <div id="login-container">
-            <div id="profile-logo"><i class="fa-regular fa-user"></i></div>
+            <div id="profile-logo"><i class="fa-solid fa-signature"></i></div>
             <form action="POST">
 
                 <!--Username input-->
                 <div class="input-container">
-                    <div class="input-icon"><i class="fa-solid fa-user" style="color: white;"></i></div>
-                    <input type="text" name="username" placeholder="Username">
+                    <div class="input-icon"><i class="fa-solid fa-user"></i></div>
+                    <input type="text" name="username" placeholder="Username" required>
+                </div>
+
+                <!--Email input-->
+                <div class="input-container">
+                    <div class="input-icon"><i class="fa-solid fa-at"></i></div>
+                    <input type="email" required name="username" placeholder="Email">
                 </div>
 
                 <!--Password input-->
                 <div class="input-container">
-                    <div class="input-icon"><i class="fa-solid fa-lock" style="color: white;"></i></div>
-                    <input type="password" name="password" placeholder="Password">
+                    <div class="input-icon"><i class="fa-solid fa-lock"></i></div>
+                    <input type="password" name="password" placeholder="Password" required>
                 </div>
 
-                <button type="submit" id="login-btn">LOGIN</button>
+                <!--Confirm password input-->
+                <div class="input-container">
+                    <div class="input-icon"><i class="fa-solid fa-lock"></i></div>
+                    <input type="password" name="password" placeholder="Confirm Password" required>
+                </div>
+
+                <button type="submit" id="login-btn">SIGN UP</button>
 
                 <div id="or">
                     <div class="hr"></div> <!--Horizental line-->
@@ -35,8 +47,8 @@
                 </div>
 
                 <div id="signup">
-                    <span>New User?</span>
-                    <button>SIGN UP</button>
+                    <span>Already A User?</span>
+                    <button>LOGIN</button>
                 </div>
 
             </form>
