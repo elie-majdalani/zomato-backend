@@ -32,7 +32,7 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     background: rgb(255,255,255);
     border-radius: 20px;
     background: linear-gradient(333deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.6) 34%, rgba(255,255,255,0.4) 68%, rgba(255,255,255,0.4) 100%);
@@ -83,7 +83,6 @@ form {
 .input-icon {
     
     background-color: rgb(33, 27, 110);
-
     /* background: rgb(166,0,255);
     background: linear-gradient(333deg, rgba(166,0,255,1) 0%, rgb(255, 0, 170) 100%); */
     height: auto;
@@ -101,7 +100,7 @@ form {
 
 input::placeholder {
     font-size: 20px;
-    color: white;
+    color: rgba(255, 255, 255, 0.547);
 }
 
 input:focus {
@@ -134,12 +133,48 @@ input:focus {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 60%;
+    color: rgba(0, 0, 0, 0.433);
 }
 
 .hr {
-    background-color: black;
-    height: 2px;
-    width: 20px;
-
+    background-color: rgba(0, 0, 0, 0.256);
+    height: 1px;
+    width: 100%;
 }
 
+#or > span {
+    margin: 0 10px;
+}
+
+/*signup section*/
+#signup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#signup > span {
+    color: rgba(0, 0, 0, 0.686);
+    font-weight: 500;
+}
+
+#signup > button {
+    margin-top: 10px;
+    width: 320px;
+    height: 56px;
+    font-size: 25px;
+    color: white;
+    border: none;
+    background-color: rgba(27, 110, 34, 0.648);
+    border-radius: 20px;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: .3s;
+}
+
+#signup > button:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    transition: .3s;
+    transform: scale(1.1);
+}
