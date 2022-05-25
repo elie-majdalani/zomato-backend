@@ -13,8 +13,7 @@
 }
 
 body {
-    background: rgb(255,0,0);
-    background: linear-gradient(260deg, rgb(255, 96, 96) 0%, rgba(157,0,255,1) 100%);
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,10 +27,12 @@ i {
 /*----------------------------LOGIN/SIGNUP PAGE----------------------------*/
 /*------------------------------------------------------------------*/
 #main-container {
+    background: rgb(255,0,0);
+    background: linear-gradient(260deg, rgb(255, 96, 96) 0%, rgba(157,0,255,1) 100%);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: auto;
+    height: 100%;
     width: 100%;
 }
 
