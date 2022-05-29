@@ -1,4 +1,4 @@
-<<<?php
+<?php
 include("connection.php");
 
 $query = $mysqli->prepare("select (SELECT COUNT(*)-1 from users) as users, (SELECT COUNT(*) from comments) as comments, (SELECT COUNT(*) from restaurants) as restaurants;");
