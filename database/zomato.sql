@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 27, 2022 at 10:36 PM
+-- Generation Time: May 29, 2022 at 04:57 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -62,7 +62,8 @@ CREATE TABLE `cuisines` (
 
 INSERT INTO `cuisines` (`id`, `cuisine`) VALUES
 (1, 'Lebanese'),
-(2, 'Italian');
+(2, 'Italian'),
+(3, 'chinese');
 
 -- --------------------------------------------------------
 
@@ -86,7 +87,8 @@ CREATE TABLE `restaurants` (
 
 INSERT INTO `restaurants` (`id`, `name`, `rating`, `description`, `icon`, `phone`, `location`) VALUES
 (1, 'b2b', 0, 'test resto', NULL, '76069710', 'not availble'),
-(2, 'KFC', 0, 'test kfc description', NULL, '76069710', 'test location kfc');
+(2, 'KFC', 0, 'test kfc description', NULL, '76069710', 'test location kfc'),
+(3, 'MiniB', NULL, 'description of minib', '', '76069710', 'Dekweneh');
 
 -- --------------------------------------------------------
 
@@ -105,9 +107,8 @@ CREATE TABLE `restaurant_has_cuisines` (
 --
 
 INSERT INTO `restaurant_has_cuisines` (`id`, `restaurant_id`, `cuisine_id`) VALUES
-(1, 2, 1),
-(2, 2, 2),
-(3, 1, 2);
+(3, 1, 2),
+(4, 2, 2);
 
 -- --------------------------------------------------------
 
@@ -141,7 +142,7 @@ CREATE TABLE `users` (
   `username` varchar(200) DEFAULT NULL,
   `password` varchar(254) DEFAULT NULL,
   `email` varchar(254) DEFAULT NULL,
-  `created_at` datetime(6) NOT NULL DEFAULT current_timestamp(6)
+  `created_at` date NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -149,8 +150,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `first_name`, `last_name`, `username`, `password`, `email`, `created_at`) VALUES
-(3, 'elie', 'maj', 'elie00001', '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4', 'elie.maj@hotmail.com', '2022-05-27 16:29:36.466544'),
-(7, 'elie', 'maj', 'elie00002', '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4', 'elie.maj2@hotmail.com', '2022-05-27 16:49:19.523018');
+(3, 'elie', 'maj', 'elie00001', '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4', 'elie.maj@hotmail.com', '2022-05-27'),
+(7, 'elie', 'maj', 'elie00002', '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4', 'elie.maj2@hotmail.com', '2022-05-27'),
+(8, '', '', NULL, '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5', 'elie.maj3@hotmail.com', '2022-05-28'),
+(14, '', '', NULL, '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 'test@email', '2022-05-02');
 
 --
 -- Indexes for dumped tables
@@ -181,14 +184,14 @@ ALTER TABLE `restaurants`
 --
 ALTER TABLE `restaurant_has_cuisines`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `restaurant_id` (`restaurant_id`),
-  ADD KEY `cuisine_id` (`cuisine_id`);
+  ADD KEY `restaurant_has_cuisines_ibfk_1` (`restaurant_id`),
+  ADD KEY `restaurant_has_cuisines_ibfk_2` (`cuisine_id`);
 
 --
 -- Indexes for table `roles`
 --
 ALTER TABLE `roles`
-  ADD KEY `user_id` (`user_id`);
+  ADD KEY `roles_ibfk_1` (`user_id`);
 
 --
 -- Indexes for table `users`
@@ -206,25 +209,25 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `cuisines`
 --
 ALTER TABLE `cuisines`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `restaurants`
 --
 ALTER TABLE `restaurants`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `restaurant_has_cuisines`
 --
 ALTER TABLE `restaurant_has_cuisines`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- Constraints for dumped tables
@@ -241,14 +244,14 @@ ALTER TABLE `comments`
 -- Constraints for table `restaurant_has_cuisines`
 --
 ALTER TABLE `restaurant_has_cuisines`
-  ADD CONSTRAINT `restaurant_has_cuisines_ibfk_1` FOREIGN KEY (`restaurant_id`) REFERENCES `restaurants` (`id`),
-  ADD CONSTRAINT `restaurant_has_cuisines_ibfk_2` FOREIGN KEY (`cuisine_id`) REFERENCES `cuisines` (`id`);
+  ADD CONSTRAINT `restaurant_has_cuisines_ibfk_1` FOREIGN KEY (`restaurant_id`) REFERENCES `restaurants` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `restaurant_has_cuisines_ibfk_2` FOREIGN KEY (`cuisine_id`) REFERENCES `cuisines` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `roles`
 --
 ALTER TABLE `roles`
-  ADD CONSTRAINT `roles_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+  ADD CONSTRAINT `roles_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
