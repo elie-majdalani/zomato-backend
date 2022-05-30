@@ -13,10 +13,6 @@
 }
 
 body {
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
 }
 
@@ -25,10 +21,13 @@ i {
 }
 
 /*----------------------------LOGIN/SIGNUP PAGE----------------------------*/
-/*------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------*/
 #main-container-login {
-    background: rgb(255,0,0);
-    background: linear-gradient(200deg, rgb(255, 96, 96) 0%, rgba(157,0,255,1) 100%);
+    /* background: rgb(255,0,0);
+    background: linear-gradient(200deg, rgb(53, 107, 255) 0%, rgb(255, 0, 225) 100%); */
+    background-image: url('../draft/assets/brooke-lark-wMzx2nBdeng-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,8 +36,8 @@ i {
 }
 
 #main-container-signup {
-    background: rgb(255,0,0);
-    background: linear-gradient(260deg, rgb(247, 0, 255) 0%, rgb(0, 136, 255) 100%);
+    /* background: rgb(255,0,0);
+    background: linear-gradient(260deg, rgb(247, 0, 255) 0%, rgb(0, 136, 255) 100%); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,9 +48,22 @@ i {
 
 #login-container {
     display: flex;
-    flex-direction: column;
     /* height: 100vh; */
     align-items: center;
+}
+
+#login-logo {
+    justify-content: center;
+    display: flex;
+}
+
+#login-logo img {
+    filter: opacity(.8);
+    object-fit: contain;
+    width: 80px;
+}
+#login-logo img:nth-child(2) {
+    width: 300px;
 }
 
 form {
@@ -60,17 +72,22 @@ form {
     align-items: center;
     justify-content: space-around;
     background: rgb(255, 255, 255);
-    border-radius: 20px 0 0 20px;
-    background: linear-gradient(333deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.6) 34%, rgba(255,255,255,0.4) 68%, rgba(255,255,255,0.4) 100%);
-    width: 60%;
+    border-radius: 20px;
+    background: linear-gradient(333deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.5) 34%, rgba(255,255,255,0.2) 68%, rgba(255,255,255,0.1) 100%);
+    width: 468px;
     min-width: 467px;
     height: 600px;
-    padding-top: 80px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 100px 0px;
 }
 
+#login-space {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
+
 /*login label*/
-#profile-logo {
+/* #profile-logo {
     display: flex;
     justify-content: center;
     font-weight: bolder;
@@ -83,7 +100,7 @@ form {
     background: rgb(166,0,255);
     background: linear-gradient(333deg, rgb(120, 0, 184) 0%, rgb(0, 122, 141) 100%);
     color: rgba(255, 255, 255, 0.927);
-}
+} */
 
 .input-container {
     display: flex;
@@ -92,15 +109,15 @@ form {
 }
 
 .input-container > input {
-    background-color: rgba(62, 38, 105, 0.759);
+    background-color: rgba(39, 39, 39, .5);
     color: white;
     font-size: 20px;
     padding-left: 20px;
     border: none;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
     width: 100%;
     height: 55px;
     transition: .5s ease;
@@ -108,31 +125,35 @@ form {
 
 .input-icon {
     
-    background-color: rgb(33, 27, 110);
+    background-color: rgba(255, 0, 0, 0.4);
     /* background: rgb(166,0,255);
     background: linear-gradient(333deg, rgba(166,0,255,1) 0%, rgb(255, 0, 170) 100%); */
     height: auto;
     width: 70px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .input-icon > i {
-    transform: scale(1.6) translateX(1px);
+    transform: scale(1.6);
 }
 
 input::placeholder {
     font-size: 20px;
-    color: rgba(255, 255, 255, 0.547);
+    color: rgb(255, 255, 255);
 }
 
 input:focus {
     outline: none;
     transition: .2s ease;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.65);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+#password-login-input  {
+    transform: translateY(-20px);
 }
 
 #login-btn {
@@ -141,17 +162,17 @@ input:focus {
     font-size: 25px;
     color: white;
     border: none;
-    background-color: rgba(27, 32, 110, 0.648);
-    border-radius: 20px;
+    background-color: rgba(255, 0, 0, 0.5);
+    border-radius: 5px;
     font-weight: bolder;
     cursor: pointer;
     transition: .3s;
 }
 
 #login-btn:hover {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     transition: .3s;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 /*or horizental line*/
@@ -192,9 +213,11 @@ input:focus {
     width: 320px;
     height: 56px;
     font-size: 25px;
-    color: white;
+    color: rgba(5, 5, 5, 0.737);
     border: none;
-    background-color: rgba(27, 110, 34, 0.648);
+    /* background-color: rgba(27, 110, 34, 0.648); */
+    background:none;
+    text-decoration: underline;
     border-radius: 20px;
     font-weight: bolder;
     cursor: pointer;
@@ -202,9 +225,9 @@ input:focus {
 }
 
 #signup > button:hover {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); */
     transition: .3s;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 /*HERO SECTION*/
@@ -212,11 +235,705 @@ input:focus {
     display: none;
 } */
 
-img {
+/* #main-container-login img, #main-container-signup img {
     transform: translateY(24.8px);
     height: 600px;
     width: 400px;
     object-fit: cover;
     border-radius: 0 20px 20px 0;
     box-shadow: rgba(0, 0, 0, 0.1) 30px 0px 100px 0px;
+} */
+
+/*first and last name signup*/
+.name-input {
+    border-radius: 20px !important;
+    width: 49% !important;
+}
+
+.name-input-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/*MEDIA QUERY FOR LOGIN AND SIGNUP*/
+/* @media screen and (max-width: 877px){
+    #main-container-signup img, #main-container-login img {
+        display: none;
+    }
+    #main-container-signup form, #main-container-login form {
+        border-radius: 20px;
+    }
+    #login-container {
+        width: 100%;
+    }
+} */
+
+
+/*----------------------------HOME PAGE------------------------------------*/
+/*-------------------------------------------------------------------------*/
+
+#home-body {
+    background-color: rgb(244, 244, 244);
+}
+
+#home-header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url('../draft/assets/brooke-lark-o2ul302zP-o-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 630px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#home-header-logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    margin-top: 100px;
+}
+
+#home-header-logo-container img {
+    width: 1000px;
+    height: 100%;
+}
+
+#home-header h1 {
+    color: white;
+    font-size: 60px;
+    text-align: center;
+    transform: translateY(-20px);
+}
+
+#header-search {
+    border: none;
+    height: 69px;
+    width: 700px;
+    margin-top: 50px;
+    border-radius: 50px;
+    padding-left: 30px;
+    font-size: 20px;
+}
+
+#header-search::placeholder {
+    color: gray;
+}
+
+/*header media query*/
+@media screen and (max-width: 980px){
+    #home-header-logo-container img {
+        width: 100%;
+    }
+
+    #home-header-logo-container {
+        width: 70%;
+    }
+    #home-header {
+        height: 600px;
+    }
+    #home-header h1 {
+        font-size: 40px;
+        transform: translateY(-0px);
+    }
+}
+
+@media screen and (max-width: 737px) {
+    #header-search {
+        width: 90%;
+    }
+}
+
+/*near you section*/
+#near-you-list {
+    display: flex;
+    justify-content: center;
+    width: 85%;
+}
+#near-you-list ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(310px, 1fr));
+    list-style: none;
+    justify-items: center;
+    width: 100%;
+}
+
+#near-you-list > ul > li {
+    width: 300px;
+    height: 350px;
+    border-radius: 20px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.319); */
+    border: .5px rgba(0, 0, 0, 0.226) solid;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 45px;
+    cursor: pointer;
+    transition: .2s;
+    background-color: white;
+}
+
+#near-you-list li:hover {
+    transform: scale(1.05);
+    transition: .2s;
+}
+
+#near-you-list img {
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom: 1px rgba(0, 0, 0, 0.226) solid;
+}
+
+.card-body {
+    
+    margin: 12px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-body-cuisines ul {
+    display: flex;
+}
+
+#near-you-list > ul > li ul {
+    display: flex;
+}
+
+#near-you-list > ul > li ul>li {
+    margin-right: 10px;
+}
+
+#near-you-list h2 {
+    font-size: 28px;
+    color: rgb(80, 80, 80);
+}
+
+#near-you-list i {
+    color: rgb(211, 0, 39);
+}
+
+#near-you {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* #near-you h1*/.section-title { 
+    font-size: 43px;
+    margin-right: auto;
+    margin-left: 6.5%;
+    padding: 60px 0 30px 30px;
+    font-weight: 500;
+    color: rgb(91, 91, 91);
+}
+
+#near-you h1>strong {
+    color: rgb(57, 57, 57);
+}
+
+/*rate*/
+.rate {
+    background-color: lime;
+    width: 10px;
+    height: 10px;
+}
+
+.fa-star {
+    color: red !important;
+}
+
+/*other locations section*/
+#other-locations-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#other-locations-container div {
+    display: flex;
+    flex-direction: column;
+}
+
+#other-locations-container ul{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(240px, 1fr));
+    list-style: none;
+    justify-items: center;
+    width: 85%;
+}
+
+#other-locations-container li {
+    font-size: 21px;
+    border-radius: 4px;
+    padding: 0 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 230px;
+    height: 75px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.719);
+    border: .5px rgba(0, 0, 0, 0.316) solid;
+    margin: 10px 0;
+    transition: .1s;
+    background-color: white;
+    box-shadow: 0px 5px 10px rgba(128, 128, 128, 0.203);
+}
+
+#other-locations-container li:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: .1s;
+}
+
+#other-locations-container i {
+    color: gray;
+    font-size: 17px;
+}
+
+/*Cuisines section*/
+#cuisines-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#cuisines-list ul{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(240px, 1fr));
+    list-style: none;
+    justify-items: center;
+    width: 85%;
+}
+
+#cuisines li {
+    font-size: 21px;
+    border-radius: 4px;
+    padding: 0 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 230px;
+    height: 75px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.719);
+    border: .5px rgba(0, 0, 0, 0.316) solid;
+    margin: 10px 0;
+    transition: .1s;
+    background-color: white;
+    box-shadow: 0px 5px 10px rgba(128, 128, 128, 0.203);
+}
+
+#cuisines li:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: .1s;
+}
+
+/*----------------------------RESTAURANT PAGE---------------------------------*/
+/*----------------------------------------------------------------------------*/
+
+#restaurant-body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: rgb(181, 29, 29); */
+    overflow-x: hidden;
+    background-image: url('../draft/assets/brooke-lark-wMzx2nBdeng-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#restaurant-container {
+    background-color: white;
+    padding: 0 20px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.159);
+    min-width: 500px;
+}
+
+#restaurant-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+#restaurant-header h1 {
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+#restaurant-header img {
+    width: 400px;
+    border: .3px rgb(164, 0, 0) solid;
+    border-radius: 5px;
+}
+
+#restaurant-description {
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+#restaurant-info {
+    padding: 20px 0;
+    border-bottom: 1px gray solid;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+#restaurant-container i {
+    color: rgb(215, 0, 0);
+    transform: scale(1.2);
+    margin-right: 10px;
+}
+
+#restaurant-container h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    color: rgb(211, 0, 0);
+}
+
+/*reviews sections*/
+#reviews {
+    margin: 0 auto;
+}
+
+#reviews ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#reviews li {
+    max-width: 700px;
+    padding: 10px;
+    border-bottom: .5px rgba(0, 0, 0, 0.301) solid;
+    margin: 40px 0;
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.review-header span {
+    display: flex;
+    align-items: center;
+}
+
+.review-header i {
+    margin-left: 5px;
+}
+
+.review-header-left {
+    display: flex;
+    align-items: center;
+}
+
+.review-header-left img {
+    border: .7px black solid;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.review-body {
+    margin-left: 20px;
+}
+
+#restaurant-cuisines {
+    font-size: 20px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    width: 70%;
+}
+
+#restaurant-cuisines span {
+    color: crimson;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+#restaurant-cuisines ul{
+    font-style: italic;
+    list-style: none;
+    width: 70%;
+    display: flex;
+}
+
+#restaurant-cuisines li {
+    margin-left: 10px;
+    color: rgba(0, 0, 0, 0.533);
+}
+
+/*media query for restaurant page*/ 
+@media screen and (max-width: 1110px) {
+    #restaurant-description {
+        width: 80%;
+        text-align: center;
+    }
+    #restaurant-cuisines ul {
+        justify-content: center;
+    }
+    #restaurant-cuisines {
+        width: 100%;
+    }
+}
+
+/*----------------------------ADMIN PAGE-----------------------------------*/
+/*-------------------------------------------------------------------------*/
+#admin-body {
+    display: flex;
+    justify-content: center;
+    background-image: url('../draft/assets/admin/jimmy-dean-Yn0l7uwBrpw-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#admin-container {
+    background-color: white;
+    padding: 40px;
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 85%;
+}
+
+#admin-header {
+    color: white;
+    height: 230px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.7)), url('../draft/assets/admin/coffee 1.jpg');
+    background-size: cover;
+    box-shadow: 0px 5px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+#admin-header h1 {
+    font-size: 60px;
+}
+
+#admin-buttons-container {
+    width: 100%;
+    height: 10px;
+    display:flex;
+    justify-content: space-evenly;
+    height: fit-content;
+    margin-top: 30px;
+}
+
+#admin-buttons-container button {
+    width: 300px;
+    height: 100px;
+    border: 5px rgb(110, 110, 110) solid;
+    background-color: white;
+    color: rgb(112, 112, 112);
+    font-weight: 600;
+    font-size: 32px;
+    border-radius: 7px;
+    transition: .3s;
+    display: flex;
+    align-items: center;
+}
+
+#admin-buttons-container button:hover {
+    transform: scale(1.06);
+    cursor: pointer;
+    transition: .3s;
+}
+
+#admin-buttons-container i {
+    color: rgb(112, 112, 112);
+    transform: scale(2);
+    padding-left: 16px;
+}
+
+#admin-stats {
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+#admin-stats h2 {
+    font-weight: 500;
+    color: rgb(46, 46, 46);
+}
+
+/*----------------------------ADD PAGE-------------------------------------*/
+/*-------------------------------------------------------------------------*/
+
+#create-body {
+    display: flex;
+    justify-content: center;
+    background-image: url('../draft/assets/admin/rachel-park-hrlvr2ZlUNk-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#create-container {
+    background-color: white;
+    padding: 40px;
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 85%;
+    min-width: 500px;
+    height: fit-content;
+}
+
+#create-header {
+    color: white;
+    height: 230px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url('../draft/assets/admin/marshmallow.jpg');
+    background-size: cover;
+    box-shadow: 0px 5px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+#create-header h1 {
+    font-size: 60px;
+}
+
+#create-form-container {
+    width: 100%;
+    margin-top: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#create-form-container div:nth-child(1) {
+    margin-right: 20px;
+}
+
+.form-section {
+    width: fit-content;
+    font-size: 22px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-section h2 {
+    color: rgba(0, 0, 0, 0.723);
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.form-section > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-section input {
+    border: 2px rgba(220, 20, 60, 0.536) solid;
+    border-radius: 3px;
+    width: 400px;
+    height: 30px;
+    font-size: 21px;
+    padding-left: 5px;
+    margin-bottom: 10px;
+}
+
+.form-section input:focus {
+    outline: 3px rgba(220, 20, 60, 0.218) solid;
+}
+
+.form-section input::placeholder {
+    color: gray;
+    font-size: 21px;
+}
+
+.form-section textarea {
+    /*fixed width for textarea*/
+    max-width: 400px;
+    min-width: 400px;
+    border: 2px rgba(220, 20, 60, 0.536) solid;
+    border-radius: 3px;
+    font-size: 21px;
+    padding-left: 5px;
+    margin-bottom: 10px;
+}
+
+.form-section textarea:focus {
+    outline: 3px rgba(220, 20, 60, 0.218) solid;
+}
+
+.form-section textarea::placeholder {
+    color: gray;
+    font-size: 21px;
+}
+
+#create-cuisines {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#create-cuisines input {
+    width: fit-content;
+    height: fit-content;
+    margin-bottom: 0;
+    transform: translateY(1px) scale(1.4);
+    margin-right: 10px;
+}
+
+#create-cuisines input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+#create-cuisines div {
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+}
+
+#create-cuisine-section {
+    width: 50%;
 }

@@ -5,25 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
     <title>Login</title>
 </head>
-<body>
+<body id="login-body">
 
     <div id="main-container-login">
         <div id="login-container">
-            <div id="profile-logo"><i class="fa-regular fa-user"></i></div>
-            <form action="POST">
+            
+            <form>
+
+                <div id="login-logo"><img src="./assets/draft logo/LOGO 2.png"><img src="./assets/draft logo/LOGO RED.png" alt="FOODITY"></div>
 
                 <!--Username input-->
                 <div class="input-container">
-                    <div class="input-icon"><i class="fa-solid fa-user" style="color: white;"></i></div>
-                    <input type="text" name="username" placeholder="Username">
+                    <div class="input-icon"><i class="fa-solid fa-at"></i></div>
+                    <input type="email" id="email" name="email" placeholder="Email">
                 </div>
 
                 <!--Password input-->
-                <div class="input-container">
+                <div class="input-container" id="password-login-input" >
                     <div class="input-icon"><i class="fa-solid fa-lock" style="color: white;"></i></div>
-                    <input type="password" name="password" placeholder="Password">
+                    <input type="password" id="password" name="password" placeholder="Password">
                 </div>
 
                 <button type="submit" id="login-btn">LOGIN</button>
@@ -41,14 +45,17 @@
 
             </form>
 
+            <!-- <div id="login-space"></div> -->
+
         </div>
         
-        <img src="./hero_login.jpg" alt="hero">
+        <!-- <img src="./assets/hero_loginV3.jpg" alt="hero"> -->
 
     </div>
     
-
+    <script src="scripts/login.js"></script>
 </body>
+
 </html>
 
 <!--Font awsome-->
