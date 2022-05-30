@@ -18,6 +18,9 @@ if($num_rows == 1){
     $query = $mysqli->prepare("INSERT INTO users (username, password, email) VALUES (?, ?, ?)");
     $query->bind_param("sss",$username, $password, $email);
     $query->execute();
+    $query = $mysqli->prepare("INSERT INTO roles (username, password, email) VALUES (?, ?, ?)");
+    $query->bind_param("sss",$username, $password, $email);
+    $query->execute();
     echo  "ok";  
 }
 
