@@ -52,17 +52,17 @@ i {
     align-items: center;
 }
 
-#login-logo {
+.login-logo {
     justify-content: center;
     display: flex;
 }
 
-#login-logo img {
+.login-logo img {
     filter: opacity(.8);
     object-fit: contain;
     width: 80px;
 }
-#login-logo img:nth-child(2) {
+.login-logo img:nth-child(2) {
     width: 300px;
 }
 
@@ -169,7 +169,7 @@ input:focus {
     transition: .3s;
 }
 
-#login-btn:hover {
+.login-btn:hover {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     transition: .3s;
     transform: scale(1.05);
@@ -196,6 +196,11 @@ input:focus {
 }
 
 /*signup section*/
+#signup-body {
+    background: url('../draft/assets/brooke-lark-o2ul302zP-o-unsplash.jpg');
+    background-size: cover;
+}
+
 #signup {
     display: flex;
     flex-direction: column;
@@ -618,18 +623,18 @@ input:focus {
 }
 
 /*reviews sections*/
-#reviews {
+.reviews-container {
     margin: 0 auto;
 }
 
-#reviews ul{
+.reviews-container ul{
     list-style: none;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#reviews li {
+.reviews-container li {
     max-width: 700px;
     padding: 10px;
     border-bottom: .5px rgba(0, 0, 0, 0.301) solid;
@@ -646,6 +651,8 @@ input:focus {
 .review-header span {
     display: flex;
     align-items: center;
+    font-weight: 600;
+    font-size: 21.5px;
 }
 
 .review-header i {
@@ -844,7 +851,7 @@ input:focus {
     margin-top: 35px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 #create-form-container div:nth-child(1) {
@@ -936,4 +943,118 @@ input:focus {
 
 #create-cuisine-section {
     width: 50%;
+}
+
+.form-section select {
+    border: 2px rgba(220, 20, 60, 0.536) solid;
+    border-radius: 3px;
+    width: 400px;
+    height: 30px;
+    font-size: 21px;
+    padding-left: 5px;
+    margin-bottom: 10px;
+}
+
+.form-section select:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+#form-restaurant-photo input{
+    border: none;
+}
+
+#create-restaurant-btn {
+    border: none;
+    width: 260px;
+    height: 60px;
+    border-radius: 6px;
+    transition: .2s;
+    background-color: rgba(255, 47, 75, 0.427);
+    font-size: 21px;
+}
+
+#create-restaurant-btn:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: .2s;
+}
+
+/*----------------------------SEE ALL REVIEWS PAGE-----------------------------------*/
+/*-----------------------------------------------------------------------------------*/
+
+#see-reviews-body {
+    padding: 0 5%;
+    background-color: rgba(128, 128, 128, 0.132);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#see-reviews-body h1 {
+    margin-top: 30px;
+    font-size: 42px;
+    color: rgb(67, 67, 67);
+    text-align: center;
+}
+
+#see-reviews-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    min-width: 500px;
+}
+
+#see-reviews-body ul {
+    padding: 20px;
+    list-style: none;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#see-reviews-body li {
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px;
+    padding-bottom: 10px;
+    border: .5px rgba(128, 128, 128, 0.37) solid;
+    width: 400px;
+}
+
+.accept-reject {
+    margin: 20px;
+    width: 335px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.accept,.reject {
+    border-radius: 5px;
+    width: 90px;
+    height: 30px;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.accept:hover,.reject:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: .3s;
+}
+
+.accept {
+    background-color: rgb(0, 238, 0);
+    color: rgb(0, 90, 0);
+}
+
+.reject {
+    background-color: rgb(238, 0, 36);
+    color: rgb(90, 0, 0);
 }
