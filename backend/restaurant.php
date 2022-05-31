@@ -1,11 +1,12 @@
 <?php
 include("connection.php");
 
-$id = $_GET["id"];
+$id = $_GET["resto_id"];
 
 
-$query = $mysqli->prepare("SELECT r.id, r.name, r.rating, r.description, r.icon, r.phone, r.location, c.cuisine FROM restaurants r INNER JOIN restaurant_has_cuisines rhc on r.id= rhc.restaurant_id INNER JOIN cuisines c on rhc.cuisine_id = c.id where r.id = ?");
+$query = $mysqli->prepare("SELECT r.id, r.name, r.rating, r.description, r.icon, r.phone, r.location, GROUP_CONCAT(c.cuisine) FROM restaurants r INNER JOIN restaurant_has_cuisines rhc on r.id= rhc.restaurant_id INNER JOIN cuisines c on rhc.cuisine_id = c.id where r.id = ?");
 
+//SELECT GROUP_CONCAT(id) FROM tablename;
 //SELECT r.name , r.id , cu.cuisine,u.email, c.review, c.date from restaurants as r INNER JOIN comments c on r.id=c.restaurants_id INNER join users u on u.id=c.users_id INNER JOIN restaurant_has_cuisines rhc on r.id= rhc.restaurant_id INNER JOIN cuisines cu on rhc.cuisine_id = cu.id where r.id=2 GROUP by cu.cuisine;
 
 $query->bind_param("i", $id);
